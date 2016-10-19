@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+    <package name="tutorial" extends="struts-default">
+        <action name="HelloWorld" class="tutorial.HelloWorld">
+            <result>HelloWorld.jsp</result>
+        </action>
+        <action name="Search" class="tutorial.Searchbook">
+        	<result >BookSearch.jsp</result>
+        	<result name="error">ERROR.jsp</result>
+        	
+        </action>
+        <action name="SearchWriter" class="tutorial.SearchWriter">
+        	<result >WriterSearch.jsp</result>
+        	<result name="error">ERROR.jsp</result>
+        	
+        </action>
+         <action name="Delete" class="tutorial.Delete">
+        	<result >deleteBook.jsp</result>
+        </action>
+        
+         <action name="addAuthor" class="tutorial.AuthorAdd">
+        	<result >Authoradd.jsp</result>
+        </action>
+         <action name="addBook" class="tutorial.Bookadd">
+        	<result >Bookshow.jsp</result>
+        </action>
+    </package>
+</struts>    
